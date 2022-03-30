@@ -1,0 +1,12 @@
+body{
+    text-align: center;
+    background-color: blanchedalmond;
+}
+#question{
+    font-size: 20pt;
+    color: grey;
+}
+#options{
+    font-size: 10pt;
+    color: gray;
+}

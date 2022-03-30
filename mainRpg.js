@@ -24,10 +24,6 @@ $(function() {
         "x": 0, //主角的座標
         "y": 0
     };
-    imgMain.onload = function() {
-        ctx.drawImage(imgMain, 0, 0, 80, 130, currentImgMain.x, currentImgMain.y, gridLength, gridLength);
-        //                    從(0,0)截取到(80,130) -> 圖片
-    }
     imgMountain = new Image();
     imgMountain.src = "images/material.png";
     imgEnemy = new Image();
@@ -48,6 +44,11 @@ $(function() {
             }
         }
     }
+    imgMain.onload = function() {
+        ctx.drawImage(imgMain, 0, 0, 80, 130, currentImgMain.x, currentImgMain.y, gridLength, gridLength);
+        //                    從(0,0)截取到(80,130) -> 圖片
+    }
+
 
     /*
         var images = {};

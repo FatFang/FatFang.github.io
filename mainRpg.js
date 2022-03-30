@@ -32,25 +32,57 @@ $(function() {
     imgMountain.src = "images/material.png";
     imgEnemy = new Image();
     imgEnemy.src = "images/Enemy.png";
-    imgCake = new Image();
-    imgCake.src = "images/material.png";
-    imgCake.onload = function() {
-        imgMountain.onload = function() {
-            imgEnemy.onload = function() {
-                for (var x in mapArray) {
-                    for (var y in mapArray[x]) {
-                        if (mapArray[x][y] == 1) {
-                            ctx.drawImage(imgMountain, 32, 192, 32, 32, y * gridLength, x * gridLength, gridLength, gridLength);
-                        } else if (mapArray[x][y] == 3) {
-                            ctx.drawImage(imgEnemy, 7, 40, 104, 135, y * gridLength, x * gridLength, gridLength, gridLength);
-                        } else if (mapArray[x][y] == 2) {
-                            ctx.drawImage(imgCake, 128, 96, 32, 32, y * gridLength, x * gridLength, gridLength, gridLength);
-                        }
+
+    imgMountain.onload = function() {
+        imgEnemy.onload = function() {
+            for (var x in mapArray) {
+                for (var y in mapArray[x]) {
+                    if (mapArray[x][y] == 1) {
+                        ctx.drawImage(imgMountain, 32, 192, 32, 32, y * gridLength, x * gridLength, gridLength, gridLength);
+                    } else if (mapArray[x][y] == 3) {
+                        ctx.drawImage(imgEnemy, 7, 40, 104, 135, y * gridLength, x * gridLength, gridLength, gridLength);
+                    } else if (mapArray[x][y] == 2) {
+                        ctx.drawImage(imgMountain, 128, 96, 32, 32, y * gridLength, x * gridLength, gridLength, gridLength);
                     }
                 }
             }
         }
     }
+
+    /*
+        var images = {};
+        debugger;
+
+        function loadImages(sources) {
+            var loadedImages = 0;
+            var numImages = 0;
+            for (var src in sources) {
+                numImages++;
+            }
+            for (var s in sources) {
+                images[s] = new Image();
+                images[s].src = sources[s];
+            }
+        }
+        var sources = { Mountain: "images/material.png", Enemy: "images/Enemy.png", Cake: "images/material.png" };
+        loadImages(sources);
+        images[Mountain].onload = function() {
+            images[Enemy].onload = function() {
+                images[Cake].onload = function() {
+                    for (var x in mapArray) {
+                        for (var y in mapArray[x]) {
+                            if (mapArray[x][y] == 1) {
+                                ctx.drawImage(images.Mountain, 32, 192, 32, 32, y * gridLength, x * gridLength, gridLength, gridLength);
+                            } else if (mapArray[x][y] == 3) {
+                                ctx.drawImage(images.Enemy, 7, 40, 104, 135, y * gridLength, x * gridLength, gridLength, gridLength);
+                            } else if (mapArray[x][y] == 2) {
+                                ctx.drawImage(images.Cake, 128, 96, 32, 32, y * gridLength, x * gridLength, gridLength, gridLength);
+                            }
+                        }
+                    }
+                }
+            }
+        }*/
 });
 //處理使用者按下按鍵
 $(document).on("keydown", function(event) {

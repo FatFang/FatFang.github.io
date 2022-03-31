@@ -45,45 +45,43 @@ $(function() {
         }
     }
     imgMain.onload = function() {
-        ctx.drawImage(imgMain, 0, 0, 80, 130, currentImgMain.x, currentImgMain.y, gridLength, gridLength);
-        //                    從(0,0)截取到(80,130) -> 圖片
-    }
-
-
-    /*
-        var images = {};
-        debugger;
-
-        function loadImages(sources) {
-            var loadedImages = 0;
-            var numImages = 0;
-            for (var src in sources) {
-                numImages++;
-            }
-            for (var s in sources) {
-                images[s] = new Image();
-                images[s].src = sources[s];
-            }
+            ctx.drawImage(imgMain, 0, 0, 80, 130, currentImgMain.x, currentImgMain.y, gridLength, gridLength);
+            //                    從(0,0)截取到(80,130) -> 圖片
         }
-        var sources = { Mountain: "images/material.png", Enemy: "images/Enemy.png", Cake: "images/material.png" };
-        loadImages(sources);
-        images[Mountain].onload = function() {
-            images[Enemy].onload = function() {
-                images[Cake].onload = function() {
-                    for (var x in mapArray) {
-                        for (var y in mapArray[x]) {
-                            if (mapArray[x][y] == 1) {
-                                ctx.drawImage(images.Mountain, 32, 192, 32, 32, y * gridLength, x * gridLength, gridLength, gridLength);
-                            } else if (mapArray[x][y] == 3) {
-                                ctx.drawImage(images.Enemy, 7, 40, 104, 135, y * gridLength, x * gridLength, gridLength, gridLength);
-                            } else if (mapArray[x][y] == 2) {
-                                ctx.drawImage(images.Cake, 128, 96, 32, 32, y * gridLength, x * gridLength, gridLength, gridLength);
+        /*
+            var images = {};
+            debugger;
+
+            function loadImages(sources) {
+                var loadedImages = 0;
+                var numImages = 0;
+                for (var src in sources) {
+                    numImages++;
+                }
+                for (var s in sources) {
+                    images[s] = new Image();
+                    images[s].src = sources[s];
+                }
+            }
+            var sources = { Mountain: "images/material.png", Enemy: "images/Enemy.png", Cake: "images/material.png" };
+            loadImages(sources);
+            images[Mountain].onload = function() {
+                images[Enemy].onload = function() {
+                    images[Cake].onload = function() {
+                        for (var x in mapArray) {
+                            for (var y in mapArray[x]) {
+                                if (mapArray[x][y] == 1) {
+                                    ctx.drawImage(images.Mountain, 32, 192, 32, 32, y * gridLength, x * gridLength, gridLength, gridLength);
+                                } else if (mapArray[x][y] == 3) {
+                                    ctx.drawImage(images.Enemy, 7, 40, 104, 135, y * gridLength, x * gridLength, gridLength, gridLength);
+                                } else if (mapArray[x][y] == 2) {
+                                    ctx.drawImage(images.Cake, 128, 96, 32, 32, y * gridLength, x * gridLength, gridLength, gridLength);
+                                }
                             }
                         }
                     }
                 }
-            }
-        }*/
+            }*/
 });
 //處理使用者按下按鍵
 $(document).on("keydown", function(event) {

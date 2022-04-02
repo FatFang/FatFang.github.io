@@ -13,8 +13,8 @@ $(function() {
         [0, 1, 0, 0, 0, 0, 1, 0],
         [0, 0, 0, 3, 1, 1, 0, 0],
         [1, 1, 1, 1, 0, 0, 0, 1],
-        [0, 2, 1, 0, 0, 1, 0, 0],
-        [0, 1, 1, 0, 1, 3, 1, 0],
+        [0, 2, 1, 0, 0, 3, 0, 0],
+        [0, 1, 1, 0, 1, 1, 1, 0],
         [0, 0, 0, 0, 1, 0, 0, 0]
     ];
     ctx = $("#myCanvas")[0].getContext("2d"); //以什麼的方式去繪製
@@ -84,7 +84,47 @@ $(function() {
             }*/
 });
 //處理使用者按下按鍵
+
+var currentEx1 = 3,
+    currentEy1 = 3,
+    currentEx2 = 2,
+    currentEy2 = 6,
+    currentEx3 = 5,
+    currentEy3 = 5;
+var i = 0;
+/*
+$(function() {
+    var i = 0;
+    var j = 5;
+    while (j) {
+        if (i == 0) {
+            i = 1;
+            currentEx1 = 2;
+            currentEx2 = 1;
+            currentEx3 = 4;
+        } else {
+            i = 0;
+            currentEx1 = 3;
+            currentEx2 = 2;
+            currentEx3 = 5;
+        }
+        ctx.drawImage(imgEnemy, 7, 40, 104, 135, currentEy1 * gridLength, currentEx1 * gridLength, gridLength, gridLength);
+        ctx.drawImage(imgEnemy, 7, 40, 104, 135, currentEy2 * gridLength, currentEx2 * gridLength, gridLength, gridLength);
+        ctx.drawImage(imgEnemy, 7, 40, 104, 135, currentEy3 * gridLength, currentEx3 * gridLength, gridLength, gridLength);
+        j--;
+    }
+}); */
 $(document).on("keydown", function(event) {
+    ctx.clearRect(currentEy1 * gridLength, currentEx1 * gridLength, gridLength, gridLength);
+    if (i == 0) {
+        i = 1;
+        currentEx1 = 2;
+    } else {
+        i = 0;
+        currentEx1 = 3;
+    }
+    ctx.drawImage(imgEnemy, 7, 40, 104, 135, currentEy1 * gridLength, currentEx1 * gridLength, gridLength, gridLength);
+
     imgMain.offsetTop
         //debugger;
     let targetImg, targetBlock, cutImagePositionX;

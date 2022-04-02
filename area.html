@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> HW3 </title>
+    <script type="text/javascript" src="area.js"></script>
+    <style type="text/css">
+        table {
+            width: 300px;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        tr td {
+            border: 1px solid black;
+        }
+        
+        body {
+            text-align: center;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <div style="width: 80px; height: 30px; background-color: blanchedalmond; border-radius: 20px; text-align: center;"><a href="index.html">返回</a></div>
+    </p>
+    <h1>任意兩四邊形交疊面積計算</h1>
+    <h2>SampleInput放在area.html底下註解</h2>
+    <form name="form" id="form" method="post">
+        <label>四邊形四點座標輸入輸入(一次輸入十筆資料): <br><textarea name="txt" rows="20" cols = "60"></textarea></label>
+        <br>
+        <button type="button" onclick="javascript:progress()">Submit</button>
+    </form>
+    <p id="out"></p>
+</body>
+
+</html>
+<!--
+Sample input
+-1,1,4,3,4,1,3,0  
+-2,2,-1,5,3,4,2,0
+1,1,1,5,4,5,4,2
+4,3,4,5,6,6,6,4
+7,7,8,10,11,10,10,7
+9,8,9,11,10,11,10,8
+5,5,5,9,9,9,9,5
+7,7,5,11,11,10,8,7
+1,1,1,5,5,5,5,1
+1,1,1,5,5,5,5,1
+5,5,5,9,9,9,9,5
+6,7,3,10,9,11,7,7
+-1,-1,-1,-5,-5,-5,-5,-1
+-1,-1,-1,-5,-5,-5,-5,-1
+-5,-5,-5,-9,-9,-9,-9,-5
+-7,-7,-5,-11,-11,-10,-8,-7
+1,1,1,5,5,5,5,1
+0,3,3,6,6,3,3,0
+1,2,2,7,7,6,8,1
+5,4,4,9,10,9,9,5
+
+
+
+-->

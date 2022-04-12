@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>waterGlass</title>
+    <link rel="stylesheet" href="water.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .liquid::before{
+        content: '';
+        position: absolute;
+        top: -10px;
+        width: 100%;
+        height: 20px;
+        background: #41c1fb;
+        border-radius: 50%;
+        filter: drop-shadow(0 0 80px #41c1fb);
+        }
+        .liquid{
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        background: #41c1fb;
+        border-bottom-left-radius: 150px;
+        border-bottom-right-radius: 150px;
+        filter: drop-shadow(0 0 80px #41c1fb);
+        transform-origin: top center;
+        animation: animateLiquid 5s linear infinite;
+    }
+    </style>
+    <script>
+        function change() {
+            var liq = document.getElementById("liq");
+            var input = document.getElementById("inputC");
+            var Color = input.value;
+            $("<style type='text/css' id='before' />").appendTo("head");
+            $("#before").text(".liquid::before{content: '';position: absolute;top: -10px;width: 100%;height: 20px;background: "+ Color+";border-radius: 50%;filter: drop-shadow(0 0 80px "+Color+");}");
+            $("<style type='text/css' id='main' />").appendTo("head");
+            $("#main").text(" .liquid{position: absolute;top: 50%;left: 5px;right: 5px;bottom: 5px;background:"+Color+";border-bottom-left-radius: 150px;border-bottom-right-radius: 150px;filter: drop-shadow(0 0 80px "+Color+");transform-origin: top center;animation: animateLiquid 5s linear infinite;");
+        
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <section>
+        <div
+            style="width: 80px; height: 30px; background-color: blanchedalmond; border-radius: 20px; text-align: center;">
+            <a href="index.html">返回</a></div>
+        <div class="shadow"></div>
+        <div class="bowl">
+            <div class="liquid" id="liq"></div>
+        </div>
+        <div class="color">Choose&nbspColor<input type="color" id="inputC"></div>
+        <div class="colorB"><button onclick="change()" style="width: 80px; height: 30px; border-radius: 5%; background-color: rgb(255, 255, 255); font-size: 13pt;">Change</button></div>
+    </section>
+</body>
+
+</html>

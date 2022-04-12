@@ -84,30 +84,30 @@ section {
 }
 .shadow{
     position: absolute;
-    top: calc(50% + 90px);
-    left: 55%;
+    top: calc(50% + 100px);
+    left: 50%;
     transform: translate(-50%,-50%);
     width: 300px;
     height: 30px;
     background: rgba(0,0,0,0.5);
-    border-radius: 50%;
+    border-radius: 53%;
     animation: animateShadow 5s linear infinite;
 }
 @keyframes animateShadow{
     0%{
-        left: 55%;
+        left: 53%;
     }
     25%{
-        left: 60%;
+        left: 57%;
     }
     50%{
-        left: 55%;
+        left: 53%;
     }
     70%{
-        left: 50%;
+        left: 49%;
     }
     100%{
-        left: 55%;
+        left: 53%;
     }
 }
 .color{
@@ -119,7 +119,7 @@ section {
 }
 .colorB{
     position: absolute;
-    
+
     top: 76%;
     left: 50%;
     font-size: 20pt;

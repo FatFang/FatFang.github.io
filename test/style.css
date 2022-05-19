@@ -1,0 +1,29 @@
+svg{
+  height: 100vh
+  
+}
+body{
+  background-color: rgb(93, 137, 87);
+}
+path{
+    stroke: rgb(0, 0, 0);
+    fill: transparent;
+    transition: 1s;
+}
+path:hover{
+    fill: rgb(18, 54, 13);
+    transform: translate(5px,5px);
+}
+#mainTitle{
+    position: absolute;
+    top: 15px;
+    right: 220px;
+    font-size: 50pt;
+    color: rgb(190, 190, 190);
+}
+hr{
+    width: 100px;
+    margin-left: 0;
+    border: none;
+    border-bottom: solid 2px white;
+}

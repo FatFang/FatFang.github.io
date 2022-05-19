@@ -16,7 +16,7 @@ path:hover{
 }
 #mainTitle{
     position: absolute;
-    top: -10px;
+    top: -15px;
     right: 50px;
     font-size: 22pt;
     color: rgb(169, 169, 169);
@@ -30,9 +30,9 @@ path:hover{
 #chartBar2{
   position: absolute;
   right: 120px;
-  top:250px;
+  top:240px;
   width: 800px;
-  height: 580px;
+  height: 570px;
   border: 1px solid #ccc;
   font-size: 20pt;
   background-color: rgb(167, 167, 167);

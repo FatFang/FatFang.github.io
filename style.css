@@ -11,7 +11,7 @@ path{
     transition: 1s;
 }
 path:hover{
-    fill: rgb(18, 54, 13);
+    fill: rgb(37, 86, 30);
     transform: translate(5px,5px);
 }
 #mainTitle{

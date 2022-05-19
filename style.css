@@ -21,9 +21,27 @@ path:hover{
     font-size: 20pt;
     color: rgb(190, 190, 190);
 }
+#chartBar{
+  position: absolute;
+  right: 20px;
+  top:100px;
+}
 hr{
     width: 100px;
     margin-left: 0;
     border: none;
     border-bottom: solid 2px rgb(190, 190, 190);
 }
+/**/
+#chartBar{
+  position: absolute;
+  right: 20px;
+  top:100px;
+  border: 1px solid #ccc;
+  }
+  .axis .domain{
+  stroke:none;
+  }
+  .x line{
+  stroke: white;
+  }

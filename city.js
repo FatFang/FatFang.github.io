@@ -132,11 +132,34 @@ var place_data=[
     },
   ]
   ;
-  /**/
+  /*
 var parsed;
-fetch('./people.csv').then(response => response.text()).then(body => {
+fetch('https://covid-19.nchc.org.tw/api/csv?CK=covid-19@nchc.org.tw&querydata=4003 ').then(response => response.text()).then(body => {
     parsed = body.split("\n").map(line => line.split(","));
-})
+})*/
+function ready(data){
+  const svg_width = 400;
+    const svg_height = 500;
+    const chart_margin = {top:80,right:40,bottom:40,left:80};
+    const chart_width = svg_width - (chart_margin.left + chart_margin.right);
+    const chart_height = svg_height - (chart_margin.top + chart_margin.bottom);
+    const this_svg = d3.select('#chartBar').append('svg')
+    .attr('width', svg_width).attr('height',svg_height).attr('id',"chartBar").append('g')
+    .attr('transform',`translate(${chart_margin.left},${chart_margin.top})`);
+}
+function type(d){
+    return{
+        date:d.date,
+        checkAll:+d.checkAll,
+    }
+}
+d3.csv('./export.csv',type).then(
+  res =>{
+      console.log(res);
+      ready(res);
+      //debugger;
+  }
+);
   var vm = new Vue({
     el: "#app",
     data: {

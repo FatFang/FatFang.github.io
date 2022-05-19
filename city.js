@@ -138,7 +138,7 @@ fetch('https://covid-19.nchc.org.tw/api/csv?CK=covid-19@nchc.org.tw&querydata=40
     parsed = body.split("\n").map(line => line.split(","));
 })*/
 function ready(data){
-  const svg_width = 1500;
+  const svg_width = 800;
     const svg_height = 600;
     const chart_margin = {top:100,right:40,bottom:40,left:200};
     const chart_width = svg_width - (chart_margin.left + chart_margin.right);

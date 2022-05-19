@@ -162,9 +162,7 @@ function ready(data){
     const xAxisDraw = this_svg.append('g').attr('class','xaxis').call(xAxis);
     const yAxis = d3.axisLeft(yScale).tickSize(0);
     debugger;
-    const yAxisDraw = this_svg.append('g')
-                        .attr('class','yaxis')
-                        .call(yAxis);
+    const yAxisDraw = this_svg.append('g').attr('class','yaxis').call(yAxis);
 }
 function type(d){
     return{

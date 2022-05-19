@@ -28,22 +28,25 @@ hr{
     border-bottom: solid 2px rgb(190, 190, 190);
 }
 /**/
+.xaxis {
+  font-size: 18pt;
+}
+.yaxis {
+  font-size: 18pt;
+}
 #chartBar2{
   position: absolute;
   right: 200px;
   top:500px;
   width: 1600px;
-  height: 500px;
+  height: 650px;
   border: 1px solid #ccc;
-  font-size: 30pt;
-  /*background-color: #ccc;*/
+  font-size: 40pt;
+  background-color: rgb(167, 167, 167);
 }
 .axis .domain{
   stroke:none;
 }
 .x line{
   stroke: white;
-}
-.x axis{
-  font-size: 18pt;
 }

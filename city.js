@@ -138,14 +138,33 @@ fetch('https://covid-19.nchc.org.tw/api/csv?CK=covid-19@nchc.org.tw&querydata=40
     parsed = body.split("\n").map(line => line.split(","));
 })*/
 function ready(data){
-  const svg_width = 400;
+  const svg_width = 1500;
     const svg_height = 500;
     const chart_margin = {top:80,right:40,bottom:40,left:80};
     const chart_width = svg_width - (chart_margin.left + chart_margin.right);
     const chart_height = svg_height - (chart_margin.top + chart_margin.bottom);
     const this_svg = d3.select('#chartBar').append('svg')
-    .attr('width', svg_width).attr('height',svg_height).attr('id',"chartBar").append('g')
+    .attr('width', svg_width).attr('height',svg_height).attr('id',"chartBar2").append('g')
     .attr('transform',`translate(${chart_margin.left},${chart_margin.top})`);
+    const xMax = d3.max(data,d => d.checkAll);
+    const xMin = d3.min(data,d => d.checkAll);
+    const xScale_v3 = d3.scaleLinear([0,xMax],[0,chart_width]);
+    const yScale = d3.scaleBand().domain(data.map(d=>d.date)).rangeRound([0, chart_height]).paddingInner(0.25);
+    const bars = this_svg.selectAll('bar').data(data).enter()
+    .append('rect').attr('class','bar').attr('x',0).attr('y',d=>yScale(d.date))
+    .attr('width',d=>xScale_v3(d.checkAll)).attr('height',yScale.bandwidth()).style('fill','blue');
+
+    const header = this_svg.append('g').attr('class','bar-header').attr('transform',`translate(0,${-chart_margin.top/2})`).append('text');
+    header.append('tspan').text('全台灣COVID-19累績確診人數');
+
+    const xAxis = d3.axisTop(xScale_v3).tickSizeInner(-chart_height).tickSizeOuter(0);
+                    
+    const xAxisDraw = this_svg.append('g').attr('class','x axis').call(xAxis);
+    const yAxis = d3.axisLeft(yScale).tickSize(0);
+    debugger;
+    const yAxisDraw = this_svg.append('g')
+                        .attr('class','y axis')
+                        .call(yAxis);
 }
 function type(d){
     return{

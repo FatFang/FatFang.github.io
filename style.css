@@ -21,11 +21,6 @@ path:hover{
     font-size: 20pt;
     color: rgb(190, 190, 190);
 }
-#chartBar{
-  position: absolute;
-  right: 20px;
-  top:100px;
-}
 hr{
     width: 100px;
     margin-left: 0;
@@ -33,15 +28,22 @@ hr{
     border-bottom: solid 2px rgb(190, 190, 190);
 }
 /**/
-#chartBar{
+#chartBar2{
   position: absolute;
-  right: 20px;
-  top:100px;
+  right: 200px;
+  top:500px;
+  width: 1600px;
+  height: 500px;
   border: 1px solid #ccc;
-  }
-  .axis .domain{
+  font-size: 30pt;
+  /*background-color: #ccc;*/
+}
+.axis .domain{
   stroke:none;
-  }
-  .x line{
+}
+.x line{
   stroke: white;
-  }
+}
+.x axis{
+  font-size: 18pt;
+}

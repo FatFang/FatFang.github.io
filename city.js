@@ -140,7 +140,7 @@ fetch('https://covid-19.nchc.org.tw/api/csv?CK=covid-19@nchc.org.tw&querydata=40
 function ready(data){
   const svg_width = 800;
     const svg_height = 600;
-    const chart_margin = {top:100,right:40,bottom:40,left:200};
+    const chart_margin = {top:50,right:40,bottom:40,left:60};
     const chart_width = svg_width - (chart_margin.left + chart_margin.right);
     const chart_height = svg_height - (chart_margin.top + chart_margin.bottom);
     const this_svg = d3.select('#chartBar').append('svg')
@@ -154,27 +154,28 @@ function ready(data){
     .append('rect').attr('class','bar').attr('x',0).attr('y',d=>yScale(d.date))
     .attr('width',d=>xScale_v3(d.checkAll)).attr('height',yScale.bandwidth()).style('fill','rgb(37, 86, 30)');
 
-    const header = this_svg.append('g').attr('class','bar-header').attr('transform',`translate(0,${-chart_margin.top/3})`).append('text');
+    const header = this_svg.append('g').attr('class','bar-header').attr('transform',`translate(0,${-chart_margin.top/2})`).append('text');
     header.append('tspan').text('全台灣COVID-19累績確診人數');
 
     const xAxis = d3.axisTop(xScale_v3).tickSizeInner(-chart_height).tickSizeOuter(0);
                     
     const xAxisDraw = this_svg.append('g').attr('class','xaxis').call(xAxis);
     const yAxis = d3.axisLeft(yScale).tickSize(0);
-    debugger;
-    const yAxisDraw = this_svg.append('g').attr('class','yaxis').call(yAxis);
+    const yAxisDraw = this_svg.append('g')
+                        .attr('class','yaxis')
+                        .call(yAxis);
 }
 function type(d){
     return{
         date:d.date,
-        checkAll:+d.checkAll,
+        checkAll:+d.all
     }
 }
-d3.csv('./export.csv',type).then(
+d3.csv('./owl_world_taiwan_v1-3.csv',type).then(
   res =>{
       console.log(res);
       ready(res);
-      //debugger;
+      debugger;
   }
 );
   var vm = new Vue({

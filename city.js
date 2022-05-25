@@ -132,11 +132,7 @@ var place_data=[
     },
   ]
   ;
-  /*
-var parsed;
-fetch('https://covid-19.nchc.org.tw/api/csv?CK=covid-19@nchc.org.tw&querydata=4003 ').then(response => response.text()).then(body => {
-    parsed = body.split("\n").map(line => line.split(","));
-})*/
+
 function ready(data){
   const svg_width = 800;
     const svg_height = 600;
@@ -157,13 +153,10 @@ function ready(data){
     const header = this_svg.append('g').attr('class','bar-header').attr('transform',`translate(0,${-chart_margin.top/2})`).append('text');
     header.append('tspan').text('全台灣COVID-19累績確診人數');
 
-    const xAxis = d3.axisTop(xScale_v3).tickSizeInner(-chart_height).tickSizeOuter(0);
-                    
+    const xAxis = d3.axisTop(xScale_v3).tickSizeInner(-chart_height).tickSizeOuter(0);         
     const xAxisDraw = this_svg.append('g').attr('class','xaxis').call(xAxis);
     const yAxis = d3.axisLeft(yScale).tickSize(0);
-    const yAxisDraw = this_svg.append('g')
-                        .attr('class','yaxis')
-                        .call(yAxis);
+    const yAxisDraw = this_svg.append('g').attr('class','yaxis').call(yAxis);
 }
 function type(d){
     return{
@@ -175,7 +168,6 @@ d3.csv('./owl_world_taiwan_v1-3.csv',type).then(
   res =>{
       console.log(res);
       ready(res);
-      debugger;
   }
 );
   var vm = new Vue({
@@ -198,6 +190,10 @@ d3.csv('./owl_world_taiwan_v1-3.csv',type).then(
   });
   $("path").mouseenter(function(e){
     var name=$(this).attr("data-name");
+    //var s = $(this).attr("id");
+    //debugger;
+    //var a = getElementById(s);
+    //a.setAttribute('backgroundcolor','red');
     vm.filter=name;
     //var peo;
     /*for(var i = 0;i < 22;i++){
@@ -207,6 +203,7 @@ d3.csv('./owl_world_taiwan_v1-3.csv',type).then(
     }
     a.p = peo;*/
     console.log(name);
+    //console.log(s);
   });
   
   

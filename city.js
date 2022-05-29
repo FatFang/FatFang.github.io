@@ -207,4 +207,8 @@ d3.csv('./owl_world_taiwan_v1-3.csv',type).then(
   });
   
   
-  
+  date = new Date();
+  year = date.getFullYear();
+  month = date.getMonth() + 1;
+  day = date.getDate();
+  document.getElementById("current_date").innerHTML ="時間: " + year + "/" + month + "/" + day;

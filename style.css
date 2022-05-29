@@ -37,6 +37,12 @@ path:hover{
   font-size: 20pt;
   background-color: rgb(167, 167, 167);
 }
+#current_date{
+  position: absolute;
+  top: 170px;
+  right: 20px;
+  font-size: 30pt;
+}
 .axis .domain{
   stroke:none;
 }

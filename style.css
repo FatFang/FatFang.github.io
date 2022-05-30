@@ -17,8 +17,8 @@ path:hover{
 #mainTitle{
     position: absolute;
     top: -15px;
-    right: 50px;
-    font-size: 22pt;
+    right: 40px;
+    font-size: 18pt;
     color: rgb(169, 169, 169);
 }
 .xaxis {
@@ -29,9 +29,9 @@ path:hover{
 }
 #chartBar2{
   position: absolute;
-  right: 120px;
+  right: 0px;
   top:240px;
-  width: 800px;
+  width: 780px;
   height: 570px;
   border: 1px solid #ccc;
   font-size: 20pt;
@@ -39,8 +39,8 @@ path:hover{
 }
 #current_date{
   position: absolute;
-  top: 170px;
-  right: 20px;
+  top: 150px;
+  right: -10px;
   font-size: 30pt;
 }
 .axis .domain{

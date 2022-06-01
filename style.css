@@ -18,7 +18,7 @@ path:hover{
     position: absolute;
     top: -15px;
     right: 40px;
-    font-size: 18pt;
+    font-size: 16pt;
     color: rgb(169, 169, 169);
 }
 .xaxis {
@@ -31,7 +31,7 @@ path:hover{
   position: absolute;
   right: 0px;
   top:240px;
-  width: 780px;
+  width: 680px;
   height: 570px;
   border: 1px solid #ccc;
   font-size: 20pt;
@@ -39,9 +39,9 @@ path:hover{
 }
 #current_date{
   position: absolute;
-  top: 150px;
+  top: 135px;
   right: -10px;
-  font-size: 30pt;
+  font-size: 25pt;
 }
 .axis .domain{
   stroke:none;

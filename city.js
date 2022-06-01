@@ -135,7 +135,7 @@ var place_data=[
 
 function ready(data){
   const svg_width = 700;
-    const svg_height = 600;
+    const svg_height = 700;
     const chart_margin = {top:50,right:40,bottom:40,left:80};
     const chart_width = svg_width - (chart_margin.left + chart_margin.right);
     const chart_height = svg_height - (chart_margin.top + chart_margin.bottom);

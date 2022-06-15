@@ -2,133 +2,133 @@ var place_data=[
     {
      tag: "taipei_city",
      place: "臺北市",
-     people:176096,
+     people:329137,
     },
   
     {
      tag: "new_taipei_city",
      place: "新北市",
-     people:372720,
+     people:754513,
     },
   
     {
      tag: "taichung_city",
      place: "台中市",
-     people:64417,
+     people:320394,
     },
   
     {
      tag: "tainan_city",
      place: "臺南市",
-     people:35207,
+     people:189181,
     },
   
     {
      tag: "kaohsiung_city",
      place: "高雄市",
-     people:59071,
+     people:325518,
     },
   
     {
      tag: "keelung_city",
      place: "基隆市",
-     people:36598,
+     people:71844,
     },
   
     {
      tag: "taoyuan_country",
      place: "桃園市",
-     people:153382,
+     people:373257,
     },
   
     {
      tag: "hsinchu_city",
      place: "新竹市",
-     people:13468,
+     people:56307,
     },
   
     {
      tag: "hsinchu_country",
      place: "新竹縣",
-     people:23284,
+     people:79091,
     },
   
     {
      tag: "miaoli_country",
      place: "苗栗縣",
-     people:11281,
+     people:55974,
     },
   
     {
      tag: "changhua_country",
      place: "彰化縣",
-     people:17041,
+     people:126485,
     },
   
     {
      tag: "nantou_country",
      place: "南投縣",
-     people:6296,
+     people:40700,
     },
   
     {
      tag: "yunlin_country",
      place: "雲林縣",
-     people:9410,
+     people:46931,
     },
   
     {
      tag: "chiayi_city",
      place: "嘉義市",
-     people:3382,
+     people:21628,
     },
   
     {
      tag: "chiayi_country",
      place: "嘉義縣",
-     people:5592,
+     people:34092,
     },
   
     {
      tag: "pingtung_country",
      place: "屏東縣",
-     people:17299,
+     people:84961,
     },
   
     {
      tag: "yilan_country",
      place: "宜蘭縣",
-     people:22448,
+     people:61903,
     },
   
     {
      tag: "hualien_country",
      place: "花蓮縣",
-     people:18047,
+     people:48215,
     },
   
     {
      tag: "taitung_country",
      place: "台東縣",
-     people:5795,
+     people:24654,
     },
   
     {
      tag: "penghu_country",
      place: "澎湖縣",
-     people:1352,
+     people:5706,
     },
   
     {
      tag: "chin_country",
      place: "金門縣",
-     people:1078,
+     people:3844,
     },
   
     {
      tag: "L_country",
      place: "連江縣",
-     people:213,
+     people:965,
     },
   ]
   ;
